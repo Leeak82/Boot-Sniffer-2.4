@@ -1,0 +1,9 @@
+# PMF Audit firmware — ESP-IDF defaults (target: ESP32-S2, the Flipper
+# WiFi Devboard). Only the settings this project depends on are pinned
+# here; everything else stays at the ESP-IDF default.
+CONFIG_IDF_TARGET="esp32s2"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESP_CONSOLE_UART_NUM=0
+CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
+CONFIG_LOG_DEFAULT_LEVEL_NONE=y
+CONFIG_ESP_WIFI_SOFTAP_SUPPORT=n

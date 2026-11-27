@@ -1,0 +1,8 @@
+# Build outputs
+firmware/build/
+flipper-app/dist/
+flipper-app/.vscode/
+*.elf
+*.bin
+*.fap
+*.map

@@ -1,0 +1,20 @@
+App(
+    appid="boot_sniffer_24",
+    name="Boot Sniffer 2.4",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="pmf_audit_app",
+    requires=[
+        "gui",
+        "expansion",
+    ],
+    stack_size=4096,
+    sources=[
+        "pmf_audit.c",
+        "pmf_logic.c",
+    ],
+    fap_icon="pmf_audit_10px.png",
+    fap_category="GPIO",
+    fap_author="Anthony Lee",
+    fap_version="1.0",
+    fap_description="Audit nearby 2.4 GHz WiFi networks for deauth immunity (PMF Required). Detection only - no attacks. Requires the WiFi Devboard flashed with the Boot Sniffer 2.4 firmware. UNTESTED on real hardware.",
+)
