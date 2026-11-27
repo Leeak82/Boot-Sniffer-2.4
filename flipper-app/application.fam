@@ -12,7 +12,7 @@ App(
         "pmf_audit.c",
         "pmf_logic.c",
     ],
-    fap_icon="pmf_audit_10px.png",
+    fap_icon="boot_sniffer_10px.png",
     fap_category="GPIO",
     fap_author="Anthony Lee",
     fap_version="1.0",
