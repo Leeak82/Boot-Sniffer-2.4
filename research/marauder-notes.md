@@ -95,4 +95,4 @@ Findings:
 - PINGEQUA 5Ghost (RTL8720DN/BW16 board) is the existing Flipper tool
   that flags PMF/WPA3 in scans. It needs its own dual-band board; its
   firmware does not run on the ESP32-S2 devboard. This project is the
-  2.4 GHz-only equivalent for the board the user already owns.
+  2.4 GHz-only equivalent for the ESP32-S2 devboard.

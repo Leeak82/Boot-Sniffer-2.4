@@ -1,0 +1,42 @@
+sourcecode:
+  type: git
+  location:
+    origin: https://github.com/Leeak82/Boot-Sniffer-2.4.git
+    # TODO at submit time: set to the commit that contains the
+    # screenshots/ files below. The catalog resolves screenshot paths
+    # against this exact commit.
+    commit_sha: TODO
+short_description: Scan nearby 2.4 GHz WiFi networks for deauth immunity (PMF Required) and see which ones can be booted off — with the fix for each. Detection only.
+description: |
+  Boot Sniffer 2.4 turns your Flipper Zero + WiFi Devboard into a WiFi
+  deauth-immunity scanner. Hit Scan and it checks every 2.4 GHz network
+  nearby for PMF (Protected Management Frames) — the thing that stops
+  deauth attacks — then sorts them into EXPLOITABLE and PROTECT BETTER,
+  with a plain-language fix next to each finding.
+
+  Detection only: it never transmits, never connects, and never attacks
+  anything. It just listens to beacons and reports what they say.
+
+  You need both parts: this app on the Flipper Zero, and the Boot
+  Sniffer firmware flashed onto the WiFi Devboard (ESP32-S2) — see the
+  Install section in the repo README. 2.4 GHz only; audit your own
+  networks only.
+changelog: |
+  ## 1.0.0
+
+  First release.
+
+  - ESP32-S2 firmware + Flipper app: scan 2.4 GHz beacons, read PMF
+    flags (MFPC/MFPR) from the RSN IE, sort APs into EXPLOITABLE and
+    PROTECT BETTER with a plain-language fix beside each finding.
+  - Per-AP detail view with an explicit Deauth-immune YES/NO verdict.
+  - Detection only — never transmits, never associates.
+  - Builds clean (firmware: ESP-IDF v5.3; app: uFBT, APPCHK passed).
+    Not yet tested on real hardware.
+screenshots:
+  # TODO: add qFlipper screenshots once the board arrives and the first
+  # live scan passes, e.g.:
+  # - screenshots/ss0.png
+  # - screenshots/ss1.png
+  # - screenshots/ss2.png
+  []

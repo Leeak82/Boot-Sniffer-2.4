@@ -22,9 +22,21 @@ attacks anything. It just listens to beacons and reports what they say.
 - A WiFi Devboard (ESP32-S2) plugged into it
 - A computer to build and flash from (no downloads yet — see below)
 
-## Quick start
+## Install
 
-**1. Flash the firmware onto the devboard** (ESP-IDF v5.3 required):
+You need **both parts** — neither one works alone. The app on the
+Flipper has nothing to talk to without the firmware on the devboard,
+and the firmware on the devboard does nothing without the app.
+
+**1. Get the code:**
+
+```sh
+git clone https://github.com/Leeak82/Boot-Sniffer-2.4.git
+cd Boot-Sniffer-2.4
+```
+
+**2. Flash the firmware onto the WiFi Devboard** (needs ESP-IDF v5.3 —
+install it from Espressif's guide, then run its `export.sh`):
 
 ```sh
 cd firmware
@@ -32,21 +44,22 @@ idf.py build
 idf.py -p /dev/ttyACM0 flash
 ```
 
-To go back to Marauder later, just flash Marauder again. Nothing here
-touches the Flipper itself.
+Use your board's port — on macOS it's `/dev/tty.usbserial-*`, on
+Windows it's a COM port. To go back to Marauder later, just flash
+Marauder again. Nothing here touches the Flipper itself.
 
-**2. Build the Flipper app and copy it to the Flipper** (uFBT required,
+**3. Install the app on the Flipper Zero** (needs uFBT —
 `pip install ufbt`):
 
 ```sh
-cd flipper-app
+cd ../flipper-app
 ufbt
 ```
 
 Copy `dist/boot_sniffer_24.fap` to the Flipper's SD card
 (Apps → GPIO), or install it with qFlipper.
 
-**3. Plug the devboard into the Flipper, open Boot Sniffer 2.4, hit Scan.**
+**4. Plug the devboard into the Flipper, open Boot Sniffer 2.4, hit Scan.**
 
 No Flipper app? You can also plug the flashed board into any USB serial
 terminal at 115200 baud, type `SCAN 15`, and read the `AP|...` lines
