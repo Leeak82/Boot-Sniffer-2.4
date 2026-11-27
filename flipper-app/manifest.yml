@@ -6,6 +6,9 @@ sourcecode:
     # screenshots/ files below. The catalog resolves screenshot paths
     # against this exact commit.
     commit_sha: TODO
+    # The Flipper app lives in flipper-app/; the firmware lives in
+    # firmware/. The catalog builds only the app.
+    subdir: flipper-app
 short_description: Scan nearby 2.4 GHz WiFi networks for deauth immunity (PMF Required) and see which ones can be booted off — with the fix for each. Detection only.
 description: |
   Boot Sniffer 2.4 turns your Flipper Zero + WiFi Devboard into a WiFi
